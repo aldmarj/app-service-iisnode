@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'WEBSITES_ENABLE_APP_CACHE oryx' });
+  res.render('index', { title: 'WEBSITES_ENABLE_APP_CACHE no oryx' });
 });
 
 module.exports = router;
