@@ -32,6 +32,10 @@ app.use(function(req, res, next) {
   next(err);
 });
 
+app.get('/end', function(req, res){
+   process.exit(0);
+ });
+
 // error handlers
 
 // development error handler
