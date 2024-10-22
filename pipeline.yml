@@ -4,4 +4,4 @@ pool:
 container: ubuntu:18.04
 
 steps:
-- script: printenv
+- script: touch logfiles.txt && 2>&1 | tee -a logfiles.txt && tail -f logfiles.txt
