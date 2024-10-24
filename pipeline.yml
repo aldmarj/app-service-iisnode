@@ -1,12 +1,15 @@
+trigger:
+  - none
+
 pool:
   vmImage: 'ubuntu-latest'
 
 container: 
   image: ubuntu:18.04
-  options: --name container_logs --attach container_logs
+  options: --name container_logs --attach STDOUT
 
 steps:
-- script: echo "howdy" #&& touch logfiles.txt && 2>&1 | tee -a logfiles.txt && tail -f logfiles.txt
+- script: echo "howdy" && touch logfiles.txt && 2>&1 #| tee -a logfiles.txt && tail -f logfiles.txt
 
 # - task: CmdLine@2
 #   inputs:
