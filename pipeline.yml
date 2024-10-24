@@ -1,8 +1,9 @@
 pool:
   vmImage: 'ubuntu-latest'
 
-container: ubuntu:18.04
-options: --name logs
+container: 
+  image: ubuntu:18.04
+  options: --name logs
 
 steps:
 - script: echo "howdy" && touch logfiles.txt && 2>&1 | tee -a logfiles.txt && tail -f logfiles.txt
