@@ -9,7 +9,9 @@ container:
   options: --name container_logs --attach STDOUT
 
 steps:
-- script: 
+- script:
+      touch logfiles.txt
+      2>&1 | tee -a logfiles.txt
       curl localhost:3000/process
       curl localhost:3000/memory
 
