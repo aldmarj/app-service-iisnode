@@ -11,6 +11,7 @@ container:
 steps:
 - script:
       touch logfiles.txt &&
+      echo "+++++++LOGFILES+++++++" > logfiles.txt
       2>&1 | tee -a logfiles.txt &&
       curl localhost:3000/process &&
       curl localhost:3000/memory &&
