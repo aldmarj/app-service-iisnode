@@ -11,7 +11,7 @@ container:
 steps:
 - script:
       curl localhost:3000/process &&
-      cat stderr.log
+      cat stderr.log &&
       curl localhost:3000/memory &&
       cat stdout.log
 
