@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 container: 
-  image: aldmarj/ado_container:starts_up
+  image: aldmarj/ado_container:curl
   options: --name container_logs --attach STDOUT
 
 steps:
