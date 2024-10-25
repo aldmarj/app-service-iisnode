@@ -10,10 +10,11 @@ container:
 
 steps:
 - script:
-      touch logfiles.txt
-      2>&1 | tee -a logfiles.txt
-      curl localhost:3000/process
-      curl localhost:3000/memory
+      touch logfiles.txt &&
+      2>&1 | tee -a logfiles.txt &&
+      curl localhost:3000/process &&
+      curl localhost:3000/memory &&
+      cat logfiles.txt
 
       # echo "howdy"
       # touch logfiles.txt && 2>&1 | tee -a logfiles.txt
