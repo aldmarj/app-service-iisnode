@@ -6,14 +6,14 @@ pool:
 
 container: 
   image: aldmarj/ado_container:redirect_err
-  options: --name container_logs --attach STDOUT
+  options: --name container_logs #--attach STDOUT
 
 steps:
 - script:
       curl localhost:3000/process &&
-      cat stderr.log &&
+      cat /app/stderr.log &&
       curl localhost:3000/memory &&
-      cat stdout.log
+      cat /app/stdout.log
 
 
       # echo "howdy"
