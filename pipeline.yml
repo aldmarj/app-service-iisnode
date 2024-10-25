@@ -5,7 +5,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 container: 
-  image: aldmarj/ado_container:redirect_err
+  # image: aldmarj/ado_container:redirect_err
+  image: aldmarj/ado_container:no_start
   options: --name container_logs #--attach STDOUT
 
 steps:
