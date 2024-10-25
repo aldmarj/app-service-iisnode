@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 container: 
-  image: aldmarj/ado_container:module_not_found
+  image: aldmarj/ado_container:starts_up
   options: --name container_logs --attach STDOUT
 
 steps:
