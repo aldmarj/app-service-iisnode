@@ -11,6 +11,7 @@ container:
 
 steps:
 - script:
+      pwd && ls &&
       echo "++++STDERR++++" &&
       cat /app/stderr.log &&
       echo "++++STDOUT++++" &&
