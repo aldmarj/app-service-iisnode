@@ -19,24 +19,20 @@ jobs:
         shell: bash
         run: whoami
 
-      - name: cat STDOUT
-        run: cat /app/stdout.txt
-
-      - name: cat STDERR
-        shell: bash
-        run: more /app/stderr.log
-
-      - name: cp stdout
-        shell: bash
-        run: cp /app/stdout.txt /app/read-stdout.txt
-
-      - name: cat read-stderr
-        shell: bash
-        run: cat /app/read-stdout.txt
-
       - name: cat STARTUP.SH
         shell: bash
         run: cat /app/startup.sh
 
-        
+  vm-job:
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: ls 
+       shell: bash
+       run: ls -ltra
+
+     - name: docker ps
+       shell: bash
+       run: docker ps
+
      
