@@ -9,7 +9,7 @@ jobs:
   container-job:
     runs-on: ubuntu-latest
     container:
-      image: aldmarj/ado_container:ghactions-nosleep
+      image: aldmarj/ado_container:ghactions-run
       options: --name nosleep-crash
     steps:
       - name: ls 
