@@ -17,4 +17,4 @@ jobs:
     steps:
       - name: ls 
         shell: bash
-        run: ls -ltra
+        run: ls -ltra /app
