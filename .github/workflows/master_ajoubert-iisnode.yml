@@ -2,6 +2,9 @@ name: CI
 on:
   push:
     branches: [ master ]
+defaults:
+  run:
+    shell: bash --noprofile --norc -exo pipefail {0}
 jobs:
   container-test-job:
     runs-on: ubuntu-latest
