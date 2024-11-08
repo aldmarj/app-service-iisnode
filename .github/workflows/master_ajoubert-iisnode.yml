@@ -12,8 +12,8 @@ jobs:
       ports:
         - 80
       volumes:
-        - my_docker_volume:/volume_mount
+        - /app:/app
       options: --cpus 1
     steps:
-      - name: Check STDERR
-        run: ls
+      - name: list app
+        run: ls  /app
