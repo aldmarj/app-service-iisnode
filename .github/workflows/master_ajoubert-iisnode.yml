@@ -20,6 +20,10 @@ jobs:
         shell: bash
         run: whoami
 
+      - name: cat STDERR
+        shell: bash
+        run: cat /app/stderr.log
+
       - name: cat STARTUP.SH
         shell: bash
         run: cat /app/startup.sh
