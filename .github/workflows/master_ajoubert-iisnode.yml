@@ -6,10 +6,11 @@ defaults:
   run:
     shell: bash
 jobs:
-  container-test-job:
+  container-job:
     runs-on: ubuntu-latest
     container:
       image: aldmarj/ado_container:ghactions-nosleep
+      options: --name nosleep-crash
     steps:
       - name: ls 
         shell: bash
@@ -27,12 +28,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     - name: ls 
-       shell: bash
-       run: ls -ltra
-
      - name: docker ps
        shell: bash
-       run: docker ps
+       run: docker ps -a
+
+     - name: docker logs
+       shell: bash
+       run: docker logs nosleep-crash
 
      
