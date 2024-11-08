@@ -6,7 +6,7 @@ jobs:
   container-test-job:
     runs-on: ubuntu-latest
     container:
-      image: aldmarj/ado_container:no_start_sleep
+      image: aldmarj/ado_container:ghactions
       env:
         NODE_ENV: development
       ports:
@@ -22,14 +22,6 @@ jobs:
       - name: whoami
         shell: bash
         run: whoami
-
-      - name: chmod STDOUT
-        shell: bash
-        run: chmod 777 /app/stdout.log
-
-      - name: ls two
-        shell: bash
-        run: ls -ltra /app
 
       - name: cat STDOUT
         shell: sh
