@@ -20,7 +20,7 @@ jobs:
         run: ls -ltra /app
 
       - name: cat STDOUT
-        shell: bash
+        shell: sh
         run: cat /app/stdout.log
 
       - name: cat STDERR
