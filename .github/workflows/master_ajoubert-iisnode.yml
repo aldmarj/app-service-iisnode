@@ -24,13 +24,13 @@ jobs:
         shell: bash
         run: more /app/stderr.log
 
-      - name: cp stderr
+      - name: cp stdout
         shell: bash
-        run: cp /app/stderr.log /app/read-stderr.log
+        run: cp /app/stdout.txt /app/read-stdout.txt
 
       - name: cat read-stderr
         shell: bash
-        run: cat /app/read-stderr.log
+        run: cat /app/read-stdout.txt
 
       - name: cat STARTUP.SH
         shell: bash
