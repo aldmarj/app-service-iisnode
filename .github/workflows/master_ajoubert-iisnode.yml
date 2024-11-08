@@ -24,10 +24,10 @@ jobs:
         run: whoami
 
       - name: cat STDOUT
-        shell: sh
+        shell: bash
         run: cat /app/stdout.log
 
-      - name: cat STDERR
+      - name: cat STARTUP.SH
         shell: bash
         run: cat /app/startup.sh
 
