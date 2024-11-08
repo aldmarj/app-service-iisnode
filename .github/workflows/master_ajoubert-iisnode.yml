@@ -21,7 +21,7 @@ jobs:
 
       - name: whoami
         shell: bash
-        run: echo "$USER"
+        run: whoami
 
       - name: chmod STDOUT
         shell: bash
