@@ -16,4 +16,4 @@ jobs:
       options: --cpus 1
     steps:
       - name: Check STDERR
-        run: cat /app/stderr.log
+        run: ls
