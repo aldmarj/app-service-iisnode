@@ -11,8 +11,8 @@ jobs:
         NODE_ENV: development
       ports:
         - 80
-      volumes:
-        - /app:/app
+      # volumes:
+      #   - /app:/app
       options: --cpus 1
     steps:
       - name: ls 
