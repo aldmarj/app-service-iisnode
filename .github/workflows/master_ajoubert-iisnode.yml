@@ -18,11 +18,15 @@ jobs:
 
       - name: cat STDOUT
         shell: bash
-        run: cat /app/stdout.txt
+        run: less /app/stdout.txt
 
       - name: cat STDERR
         shell: bash
-        run: cat /app/stderr.log
+        run: more /app/stderr.log
+
+      - name: cat STDERR
+        shell: bash
+        run: grep "Error" /app/stderr.log
 
       - name: cat STARTUP.SH
         shell: bash
