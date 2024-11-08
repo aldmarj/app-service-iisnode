@@ -7,13 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: aldmarj/ado_container:ghactions-txt
-      env:
-        NODE_ENV: development
-      ports:
-        - 80
-      # volumes:
-      #   - /app:/app
-      options: --cpus 1
     steps:
       - name: ls 
         shell: bash
