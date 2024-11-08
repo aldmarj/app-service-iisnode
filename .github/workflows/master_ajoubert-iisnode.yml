@@ -6,7 +6,7 @@ jobs:
   container-test-job:
     runs-on: ubuntu-latest
     container:
-      image: aldmarj/ado_container:ghactions
+      image: aldmarj/ado_container:ghactions-txt
       env:
         NODE_ENV: development
       ports:
@@ -25,7 +25,11 @@ jobs:
 
       - name: cat STDOUT
         shell: bash
-        run: cat /app/stdout.log
+        run: cat /app/stdout.txt
+
+      - name: cat STDERR
+        shell: bash
+        run: cat /app/stderr.log
 
       - name: cat STARTUP.SH
         shell: bash
