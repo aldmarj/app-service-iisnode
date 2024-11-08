@@ -20,7 +20,6 @@ jobs:
         run: whoami
 
       - name: cat STDOUT
-        shell: bash
         run: cat /app/stdout.txt
 
       - name: cat STDERR
