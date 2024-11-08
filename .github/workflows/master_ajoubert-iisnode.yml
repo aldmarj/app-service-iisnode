@@ -16,4 +16,5 @@ jobs:
       options: --cpus 1
     steps:
       - name: npm install app
+        shell: bash
         run: npm install
