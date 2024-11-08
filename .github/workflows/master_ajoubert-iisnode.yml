@@ -9,7 +9,7 @@ jobs:
   container-test-job:
     runs-on: ubuntu-latest
     container:
-      image: aldmarj/ado_container:ghactions-txt
+      image: aldmarj/ado_container:ghactions-nosleep
     steps:
       - name: ls 
         shell: bash
