@@ -24,9 +24,17 @@ jobs:
         shell: bash
         run: cat /app/stderr.log
 
+      - name: cat STDOUT
+        shell: bash
+        run: cat /app/stdout.txt
+
       - name: cat STARTUP.SH
         shell: bash
         run: cat /app/startup.sh
+
+      - name: cat Dockerfile
+        shell: bash
+        run: cat /app/Dockerfile
 
   vm-job:
     runs-on: ubuntu-latest
@@ -36,8 +44,8 @@ jobs:
        shell: bash
        run: docker ps -a
 
-     - name: docker logs
+     - name: docker images
        shell: bash
-       run: docker logs nosleep-crash
+       run: docker images
 
      
