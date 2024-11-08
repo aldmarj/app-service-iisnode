@@ -6,7 +6,7 @@ jobs:
   container-test-job:
     runs-on: ubuntu-latest
     container:
-      image: node:18
+      image: aldmarj/ado_container:no_start_sleep
       env:
         NODE_ENV: development
       ports:
@@ -16,4 +16,8 @@ jobs:
       options: --cpus 1
     steps:
       - name: Check for dockerenv file
-        run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
+        run: |
+          (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
+          pwd
+          ls
+          cat /app/stderr.log
