@@ -18,3 +18,14 @@ jobs:
       - name: ls 
         shell: bash
         run: ls -ltra /app
+
+      - name: cat STDOUT
+        shell: bash
+        run: cat /app/stdout.log
+
+      - name: cat STDERR
+        shell: bash
+        run: cat /app/stderr.log
+
+        
+     
