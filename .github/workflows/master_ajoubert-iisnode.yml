@@ -15,5 +15,5 @@ jobs:
         - /app:/app
       options: --cpus 1
     steps:
-      - name: list app
-        run: ls  /app
+      - name: npm install app
+        run: npm install
