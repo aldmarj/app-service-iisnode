@@ -18,7 +18,7 @@ jobs:
 
       - name: cat STDOUT
         shell: bash
-        run: cat /app/stdout
+        run: cat /app/stdout.txt
 
       - name: cat STDERR
         shell: bash
