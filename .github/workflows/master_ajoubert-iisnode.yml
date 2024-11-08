@@ -19,6 +19,10 @@ jobs:
         shell: bash
         run: ls -ltra /app
 
+      - name: whoami
+        shell: bash
+        run: echo "$USER"
+
       - name: chmod STDOUT
         shell: bash
         run: chmod 777 /app/stdout.log
