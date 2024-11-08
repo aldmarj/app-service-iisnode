@@ -15,9 +15,5 @@ jobs:
         - my_docker_volume:/volume_mount
       options: --cpus 1
     steps:
-      - name: Check for dockerenv file
-        run: |
-          (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
-          pwd
-          ls
-          cat /app/stderr.log
+      - name: Check STDERR
+        run: cat /app/stderr.log
