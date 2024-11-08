@@ -27,9 +27,13 @@ jobs:
         shell: bash
         run: chmod 777 /app/stdout.log
 
+      - name: ls two
+        shell: bash
+        run: ls -ltra /app
+
       - name: cat STDOUT
         shell: sh
-        run: cat /app/package.json
+        run: cat /app/stdout.log
 
       - name: cat STDERR
         shell: bash
