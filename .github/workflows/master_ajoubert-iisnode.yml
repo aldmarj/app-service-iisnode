@@ -29,11 +29,11 @@ jobs:
 
       - name: cat STDOUT
         shell: sh
-        run: cat /app/stdout.log
+        run: cat /app/package.json
 
       - name: cat STDERR
         shell: bash
-        run: cat /app/stderr.log
+        run: cat /app/startup.sh
 
         
      
